@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Poppins', 'Times New Roman', Times, serif ;
+    scroll-behavior: smooth; 
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#FFF;
+}
+a:hover{
+    color: #fee440;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    padding: 30px;
+    margin: 10px 0;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #FFF;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+/* Seção de apresentação */
+#presentation{
+    background-image: url(./background.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#presentation h1{
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: #FFF;
+    animation: fadeIn 4s  1 linear forwards;
+    animation-delay: .5s;
+}
+#presentation .colorize{
+    animation: colorize 4s linear forwards;
+    animation-delay: .5s;
+}
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #FFF;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .5s ease;
+    transition-property: background-color, color;
+}
+#presentation .cta:hover{
+    color: white;
+    font-weight: 500;
+    background-color: #eece00;
+    border: 2px solid #eece00;
+}
+
+/* Seção de Portifólio */
+#portfolio{
+    background-color: #000;
+}
+#portfolio .cta:hover{
+    color: white;
+    font-weight: 500;
+    background-color: #f15bb5;
+    border: 2px solid #f15bb5;
+}
+.all{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header{
+    margin-top: 50px;
+}
+.icon{
+    font-size: 40px;
+    color:#000;
+}
+.face {  
+    margin: 10px;  
+    width: 400px;
+    height: 400px;
+    perspective: 700px;
+    
+}  
+.front, .back {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 700ms;    
+}  
+.front {
+    background-image: linear-gradient(to right top, #f15bb5, #ff9f1c );
+    z-index: 1;
+}  
+.back {
+    background: #f15bb5;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+}  
+.face:hover .front {
+    transform: rotateY(180deg);
+    z-index: 0;
+}  
+.face:hover .back {
+    transform: rotateY(0);
+    z-index: 1;
+}
+.descricaoCard{
+    color: white;
+    padding: 15% 0;
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+}
+.linkCard{
+    margin: 70px 100px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.linkCard a{
+    font-size: 30px;
+    color:#000;
+    text-align: center;  
+}
+.linkCard:hover a {
+    color: #fee440;
+}
+.linkCard:visited a{
+    color: #000;
+}
+.containerSkill{
+    width: 60%;
+    background-color: #ddd;
+    margin: 10px;
+}  
+.html{
+    width: 80%; 
+    padding:10px; 
+    background-color: #fee440;
+}
+.css{
+    width: 70%; 
+    padding:10px; 
+    background-color: #fee440;
+}
+.js{width: 40%; 
+    padding:10px; 
+    background-color: #fee440;
+}
+
+/* Keyframes */
+@keyframes fadeIn { 
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes colorize {
+    from{color: white; opacity: 0;}
+    to{color: #fee440; opacity: 1; font-size: 8rem}
+}
+
+
+/* Media Query */
+
+@media only screen and (min-width: 450px) and (max-width: 1000px){
+    .all {           
+        justify-content: center;
+        flex-flow: column nowrap;
+     }
+     .face{
+         margin: 10px auto;
+         width: 500px;
+     }
+     .front .back{
+         width: 100%;
+     }  
+}
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+    .all{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .face{
+        margin:10px;
+        width: 300px;
+    }
+    p{       
+        line-height: 1.4rem;
+    }
+    .linkCard{
+        margin: 70px 80px;
+    }
+    .linkCard a{
+        font-size: 1.7rem;
+    }
+}
