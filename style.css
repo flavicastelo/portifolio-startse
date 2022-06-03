@@ -41,16 +41,7 @@ p {
     flex-direction: column;
     margin: 0 auto;
 }
-.section-title {
-    font-size: 4rem;
-    font-weight: 500;
-    color: #FFF;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    text-align: center;
-}
+
 
 /* Seção de apresentação */
 #presentation{
@@ -97,13 +88,24 @@ p {
 #portfolio{
     background-color: #000;
 }
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #FFF;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
 #portfolio .cta:hover{
     color: white;
     font-weight: 500;
     background-color: #f15bb5;
     border: 2px solid #f15bb5;
 }
-.all{
+.container-card{
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -149,7 +151,7 @@ p {
     transform: rotateY(0);
     z-index: 1;
 }
-.descricaoCard{
+.descricao-card{
     color: white;
     padding: 15% 0;
     font-size: 40px;
@@ -159,7 +161,7 @@ p {
     justify-content: center;
     margin: 100px auto;
 }
-.linkCard{
+.link-card{
     margin: 70px 100px;
     text-decoration: none;
     list-style: none;
@@ -167,18 +169,18 @@ p {
     align-items: center;
     justify-content: space-between;
 }
-.linkCard a{
+.link-card a{
     font-size: 30px;
     color:#000;
     text-align: center;  
 }
-.linkCard:hover a {
+.link-card:hover a {
     color: #fee440;
 }
-.linkCard:visited a{
+.link-card:visited a{
     color: #000;
 }
-.containerSkill{
+.container-skill{
     width: 60%;
     background-color: #ddd;
     margin: 10px;
@@ -193,7 +195,8 @@ p {
     padding:10px; 
     background-color: #fee440;
 }
-.js{width: 40%; 
+.js{
+    width: 40%; 
     padding:10px; 
     background-color: #fee440;
 }
@@ -211,7 +214,6 @@ p {
 
 
 /* Media Query */
-
 @media only screen and (min-width: 450px) and (max-width: 1000px){
     .all {           
         justify-content: center;
@@ -225,6 +227,7 @@ p {
          width: 100%;
      }  
 }
+
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {
     .all{
         flex-direction: row;
@@ -237,10 +240,10 @@ p {
     p{       
         line-height: 1.4rem;
     }
-    .linkCard{
+    .link-card{
         margin: 70px 80px;
     }
-    .linkCard a{
+    .link-card a{
         font-size: 1.7rem;
     }
 }
